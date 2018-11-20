@@ -109,7 +109,7 @@
 
     showPanel = (id) => {
         screenFlush();
-        $(`#${screens[i]}`).removeClass('displayOff');
+        $(`#screen_${id}`).removeClass('displayOff');
         $(`#screen_${id}`).addClass('displayOn');
     };
 
