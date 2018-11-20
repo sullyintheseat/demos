@@ -242,6 +242,9 @@
     };
 
     external2 = (target) => {
+        screenFlush();
+        $(`#screen_2`).removeClass('displayOff');
+        $(`#screen_2`).addClass('displayOn');
         $(location).attr('href', target);
     };
 
