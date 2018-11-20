@@ -60,7 +60,7 @@
 
     <div class="container displayOff" id="screen_1">
         <div class="row">
-            screen 2
+            screen 1
         </div>
     </div>
 
@@ -109,6 +109,7 @@
 
     showPanel = (id) => {
         screenFlush();
+        $(`#${screens[i]}`).removeClass('displayOff');
         $(`#screen_${id}`).addClass('displayOn');
     };
 
