@@ -39,24 +39,56 @@
 
 <body>
 
-<div class="container" style="margin-top: 25px; margin-bottom: 40px;">
-    <img src="img/via_logo.png" alt="VIA" class="center-block" style="max-width: 60px;">
-</div>
+    <div class="container" style="margin-top: 25px; margin-bottom: 40px;">
+        <img src="img/via_logo.png" alt="VIA" class="center-block" style="max-width: 60px;">
+    </div>
 
-    <div class="container" id="screen_main">
+    <div class="container" id="screen_0">
         <div class="row">
-                <div class="col-xs-6"><a href="#"><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/arlington_adventures_btn.png" alt="" border="0" onclick="showPanel('0')"/></a></div>
-                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/arlington_btn.png" alt="" border="0" onclick="showPanel('1')" /></a></div>
+            <div class="col-xs-6"><a href="#"><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/arlington_adventures_btn.png" alt="" border="0" onclick="showPanel('1')"/></a></div>
+            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/arlington_btn.png" alt="" border="0" onclick="showPanel('2')" /></a></div>
         </div>
         <div class="row">
-                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/texas_live_btn.png" alt="" border="0" onclick="showPanel('2')" /></a></div>
-                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/concert_and_events_btn.png" alt="" border="0" onclick="showPanel('3')" /></a></div>
+            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/texas_live_btn.png" alt="" border="0" onclick="showPanel('3')" /></a></div>
+            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/concert_and_events_btn.png" alt="" border="0" onclick="showPanel('4')" /></a></div>
         </div>
         <div class="row">
-                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/win_tickets_btn.png" alt="" border="0" onclick="showPanel('4')" /></a></div>
-                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/cowboys_btn.png" alt="" border="0" onclick="showPanel('4')" /></a></div>
+            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/win_tickets_btn.png" alt="" border="0" onclick="showPanel('5')" /></a></div>
+            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/cowboys_btn.png" alt="" border="0" onclick="showPanel('6')" /></a></div>
         </div>
     </div>
+
+    <div class="container" id="screen_2">
+        <div class="row">
+            screen 2
+        </div>
+    </div>
+
+    <div class="container" id="screen_3">
+        <div class="row">
+            screen 3
+        </div>
+    </div>
+
+    <div class="container" id="screen_4">
+        <div class="row">
+            screen 4
+        </div>
+    </div>
+
+    <div class="container" id="screen_5">
+        <div class="row">
+            screen 5
+        </div>
+    </div>
+
+    <div class="container" id="screen_6">
+        <div class="row">
+            screen 6
+        </div>
+    </div>
+   
+
 
 </body>
 <script>
@@ -70,7 +102,15 @@
     };
 
     showPanel = (id) => {
-        alert(`screen_${id}`);
+        screenFlush();
+        $(`#screen_${id}`).addClass('displayOn');
     };
+
+    screenFlush = () => {
+        for(let i = 0; i < screens.length; i++){
+            $(`#${screens[i]}`).removeClass('displayOn');
+            $(`#${screens[i]}`).addClass('displayOff');
+        }
+    }
 </script>
 </html>
