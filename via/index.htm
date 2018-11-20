@@ -25,6 +25,16 @@
         padding-top: 5px !important;
         padding-bottom: 5px !important;
     }
+
+    .displayOn { 
+        display: block;
+        visibility: visible;
+    }
+
+    .displayOff {
+        display: none;
+        visibility: hidden;
+    }
 </style>
 
 <body>
@@ -33,20 +43,34 @@
     <img src="img/via_logo.png" alt="VIA" class="center-block" style="max-width: 60px;">
 </div>
 
-<div class="container">
-    <div class="row">
-            <div class="col-xs-6"><a href="#"><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/arlington_adventures_btn.png" alt="" border="0" /></a></div>
-            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/arlington_btn.png" alt="" border="0" /></a></div>
+    <div class="container" id="screen_main">
+        <div class="row">
+                <div class="col-xs-6"><a href="#"><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/arlington_adventures_btn.png" alt="" border="0" onclick="showPanel('0')"/></a></div>
+                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/arlington_btn.png" alt="" border="0" onclick="showPanel('1')" /></a></div>
+        </div>
+        <div class="row">
+                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/texas_live_btn.png" alt="" border="0" onclick="showPanel('2')" /></a></div>
+                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/concert_and_events_btn.png" alt="" border="0" onclick="showPanel('3')" /></a></div>
+        </div>
+        <div class="row">
+                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/win_tickets_btn.png" alt="" border="0" onclick="showPanel('4')" /></a></div>
+                <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/cowboys_btn.png" alt="" border="0" onclick="showPanel('4')" /></a></div>
+        </div>
     </div>
-    <div class="row">
-            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/texas_live_btn.png" alt="" border="0" /></a></div>
-            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/concert_and_events_btn.png" alt="" border="0" /></a></div>
-    </div>
-    <div class="row">
-            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/win_tickets_btn.png" alt="" border="0" /></a></div>
-            <div class="col-xs-6"><a href="#"></a><img class="img-responsive center-block"  style="opacity: 0.9;"src="img/cowboys_btn.png" alt="" border="0" /></a></div>
-    </div>
-</div>
 
 </body>
+<script>
+    let screens = ['screen_0','screen_1','screen_2','screen_3','screen_4','screen_5'];
+    $( document ).ready(() => {
+        init();
+    });
+
+    init = () => {
+
+    };
+
+    showPanel (id) => {
+        alert(`screen_${id}`);
+    };
+</script>
 </html>
