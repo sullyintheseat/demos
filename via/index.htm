@@ -118,7 +118,7 @@
             
             <div class="col-xs-12 center-block" style="margin-bottom:4px;">
                 <div style="width:100%; text-align: center; margin-top:16px;">
-                    <button class="btn btn-primary btn-lg">SUBMIT</button>
+                    <button class="btn btn-primary btn-lg" onclick="submit()">SUBMIT</button>
                 </div>
             </div>
 
@@ -184,6 +184,12 @@
         $(`#screen_1`).removeClass('displayOff');
         $(`#screen_1`).addClass('displayOn');
         $(location).attr('href', target);
+    };
+
+    submit = () => {
+        screenFlush();
+        $(`#screen_1`).removeClass('displayOff');
+        $(`#screen_1`).addClass('displayOn');        
     };
 </script>
 </html>
